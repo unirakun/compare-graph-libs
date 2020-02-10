@@ -1,0 +1,27 @@
+{
+  "name": "compare-graphs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "run-p start:*",
+    "start:echarts": "PORT=3000 yarn --cwd echarts start",
+    "start:g6": "PORT=3001 yarn --cwd g6 start",
+    "start:reactd3graph": "PORT=3002 yarn --cwd reactd3graph start",
+    "start:reactdigraph": "PORT=3003 yarn --cwd reactdigraph start",
+    "start:reactgraphvis": "PORT=3004 yarn --cwd reactgraphvis start",
+    "start:sigmajs": "PORT=3005 yarn --cwd sigmajs start"
+  },
+  "workspaces": [
+    "./echarts",
+    "./g6",
+    "./reactd3graph",
+    "./reactdigraph",
+    "./reactgraphvis",
+    "./sigmajs"
+  ],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
